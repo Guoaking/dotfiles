@@ -1,7 +1,7 @@
 # Setup zinit
 - create:
   - ~/.zinit
-  - ~/.tmux
+#  - ~/.tmux
 
 - shell:
   - description: Clone zinit
@@ -12,13 +12,13 @@
       else git clone https://github.com/zdharma-continuum/zinit.git ~/.zinit/bin; fi
 
 # Setup tmux plugin manager
-- shell:
-  - description: Clone TPM
-    quiet: true
-    command: |
-      if cd ~/.tmux/plugins/tpm;
-      then git pull;
-      else git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm; fi
+#- shell:
+#  - description: Clone TPM
+#    quiet: true
+#    command: |
+#      if cd ~/.tmux/plugins/tpm;
+#      then git pull;
+#      else git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm; fi
 
 # Change default shell to zsh
 - shell:

@@ -1,9 +1,19 @@
 # fzf config
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git --ignore .idea -l -g ""'
-export FZF_DEFAULT_COMMAND='fd --type f --hidden --exclude .git --exclude .idea ""'
+#export FZF_DEFAULT_COMMAND='fd --type f --hidden --exclude .git --exclude .idea ""'
+export FZF_DEFAULT_COMMAND='fd --hidden --follow -E ".git" -E "node_modules" . /Users /etc'
+
 #export FZF_DEFAULT_OPTS="--reverse --inline-info"
 export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --preview '(highlight -O ansi {} || cat {}) 2> /dev/null | head -500'"
+
+#export FZF_DEFAULT_OPTS='--bind=ctrl-t:top,change:top --bind ctrl-e:down,ctrl-u:up'
+
+
+export FZF_COMPLETION_TRIGGER='\'
+export FZF_TMUX=1
+export FZF_TMUX_HEIGHT='80%'
+export fzf_preview_cmd='[[ $(file --mime {}) =~ binary ]] && echo {} is a binary file || (ccat --color=always {} || highlight -O ansi -l {} || cat {}) 2> /dev/null | head -500'
 
 # fe [FUZZY PATTERN] - Open the selected file with the default editor
 #   - Bypass fuzzy finder if there's only one match (--select-1)

@@ -26,23 +26,25 @@
       path: git/work.gitconfig
     ~/.gitignore_global:
       path: git/gitignore_global
-    ~/.tmux.conf:
-      path: tmux/.tmux.conf
-    ~/.tmux.conf.local:
-      path: tmux/.tmux.conf.local
     ~/.vim:
       path: .vim
     ~/.vimrc:
       path: .vimrc
-    ~/.ideavimrc:
-      if: '[ `uname` = Darwin ]'
-      path: idea/.ideavimrc
     ~/.config/espanso:
       if: '[ `uname` = Linux ]'
       path: espanso
     ~/Library/Preferences/espanso:
       if: '[ `uname` = Darwin ]'
       path: espanso
+    ~/.tmux.conf:
+      if: '[ `uname` = Darwin ]'
+      path: tmux/.tmux.conf
+    ~/.tmux.conf.local:
+      if: '[ `uname` = Darwin ]'
+      path: tmux/.tmux.conf.local
+    ~/.ideavimrc:
+      if: '[ `uname` = Darwin ]'
+      path: idea/.ideavimrc
     ~/.hammerspoon:
       if: '[ `uname` = Darwin ]'
       path: hammerspoon

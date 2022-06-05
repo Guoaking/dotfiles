@@ -84,3 +84,6 @@ There are following alias in `.zshrc` :
 - fkill : kill process
 - tm : tm new tmux session
 - fs : tmux attach tmux session
+
+## else
+ git remote set-url origin  https://token@github.com/Guoaking/dotfiles.git

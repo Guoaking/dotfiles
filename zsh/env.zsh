@@ -13,14 +13,14 @@ if [[ -d $HOME/phabricator/ ]]; then
 	export PATH="$PATH:$HOME/phabricator/arcanist/bin/"
 fi
 
-case $OSTYPE in
-	darwin*)
-		export ANDROID_HOME="$HOME/Library/Android/sdk"
-	;;
-	linux*)
-		export ANDROID_HOME="$HOME/Android/Sdk"
-	;;
-esac
+#case $OSTYPE in
+#	darwin*)
+#		export ANDROID_HOME="$HOME/Library/Android/sdk"
+#	;;
+#	linux*)
+#		export ANDROID_HOME="$HOME/Android/Sdk"
+#	;;
+#esac
 
 export PATH="$PATH:$ANDROID_HOME/bin/"
 
@@ -53,9 +53,9 @@ if [[ -d /home/linuxbrew/.linuxbrew ]]; then
 	eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 fi
 
-if [[ -d $HOME/flutter ]]; then
-	export PATH="$PATH:$HOME/flutter/flutter_sdk/bin"
-fi
+#if [[ -d $HOME/flutter ]]; then
+#	export PATH="$PATH:$HOME/flutter/flutter_sdk/bin"
+#fi
 
 # if [[ -d ~/.jenv ]]; then
 #     # jenv
@@ -64,14 +64,14 @@ fi
 # fi
 
 # JDK
-if [[ -d "/usr/local/jdk1.8.0_131" ]]; then
-    export JAVA_HOME=/usr/local/jdk1.8.0_131
-    export PATH=$PATH:$JAVA_HOME/bin/
-fi
-if [[ -d "$HOME/.asdf/installs/java/adoptopenjdk-8.0.265+1/" ]]; then
-	export JAVA_HOME=$HOME/.asdf/installs/java/adoptopenjdk-8.0.265+1/
-	export PATH=$PATH:$JAVA_HOME/bin/
-fi
+#if [[ -d "/usr/local/jdk1.8.0_131" ]]; then
+#    export JAVA_HOME=/usr/local/jdk1.8.0_131
+#    export PATH=$PATH:$JAVA_HOME/bin/
+#fi
+#if [[ -d "$HOME/.asdf/installs/java/adoptopenjdk-8.0.265+1/" ]]; then
+#	export JAVA_HOME=$HOME/.asdf/installs/java/adoptopenjdk-8.0.265+1/
+#	export PATH=$PATH:$JAVA_HOME/bin/
+#fi
 # . ~/.asdf/plugins/java/set-java-home.zsh
 # if [[ -d "/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/" ]]; then
 # 	export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/
@@ -79,63 +79,63 @@ fi
 # fi
 # export JAVA_HOME="$HOME/.jenv/versions/`jenv version-name`"
 
-if [[ -d "~/.asdf/plugins/java/" ]]; then
-	. ~/.asdf/plugins/java/set-java-home.zsh
-fi
+#if [[ -d "~/.asdf/plugins/java/" ]]; then
+#	. ~/.asdf/plugins/java/set-java-home.zsh
+#fi
 
 # Maven
-if [[ -d "/opt/maven" ]]; then
-    export M2_HOME=/opt/maven
-    export M2=$M2_HOME/bin
-    export PATH=$M2:$PATH
-fi
-if [[ -d "$HOME/.asdf/installs/maven/3.6.3" ]]; then
-	export M2_HOME=$HOME/.asdf/installs/maven/3.6.3
-	export M2=$H2_HOME/bin
-    export PATH=$M2:$PATH
-fi
+#if [[ -d "/opt/maven" ]]; then
+#    export M2_HOME=/opt/maven
+#    export M2=$M2_HOME/bin
+#    export PATH=$M2:$PATH
+#fi
+#if [[ -d "$HOME/.asdf/installs/maven/3.6.3" ]]; then
+#	export M2_HOME=$HOME/.asdf/installs/maven/3.6.3
+#	export M2=$H2_HOME/bin
+#    export PATH=$M2:$PATH
+#fi
 
 # Tomcat
-if [[ -d "/opt/tomcat" ]]; then
-    export CATALINA_HOME=/opt/tomcat/
-    export PATH=$CATALINE_HOME:$PATH
-fi
+#if [[ -d "/opt/tomcat" ]]; then
+#    export CATALINA_HOME=/opt/tomcat/
+#    export PATH=$CATALINE_HOME:$PATH
+#fi
 
 #
 # Hive
-if [[ -d "$HOME/apache-hive-2.3.4-bin" ]]; then
-    export HIVE_HOME=$HOME/apache-hive-2.3.4-bin
-    export PATH=$PATH:$HIVE_HOME/bin
-    export CLASSPATH=$CLASSPATH:$HIVE_HOME/lib/*:.
-fi
+#if [[ -d "$HOME/apache-hive-2.3.4-bin" ]]; then
+#    export HIVE_HOME=$HOME/apache-hive-2.3.4-bin
+#    export PATH=$PATH:$HIVE_HOME/bin
+#    export CLASSPATH=$CLASSPATH:$HIVE_HOME/lib/*:.
+#fi
 
 # Hadoop
-if [[ -d "$HOME/hadoop/hadoop-2.9.1" ]]; then
-    export HADOOP_HOME=$HOME/hadoop/hadoop-2.9.1
-    export HADDOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
-    export HADOOP_SSH_OPTS="-p 222"
-
-    export HADOOP_MAPRED_HOME=$HADOOP_HOME 
-    export HADOOP_COMMON_HOME=$HADOOP_HOME 
-
-    export HADOOP_HDFS_HOME=$HADOOP_HOME 
-    export YARN_HOME=$HADOOP_HOME 
-    export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native 
-    export HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/lib/native"
-
-    export PATH=$PATH:$HADOOP_HOME/sbin:$HADOOP_HOME/bin 
-    export HADOOP_INSTALL=$HADOOP_HOME 
-
-    export CLASSPATH=$CLASSPATH:$HADOOP_HOME/lib/*:.
-fi
+#if [[ -d "$HOME/hadoop/hadoop-2.9.1" ]]; then
+#    export HADOOP_HOME=$HOME/hadoop/hadoop-2.9.1
+#    export HADDOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
+#    export HADOOP_SSH_OPTS="-p 222"
+#
+#    export HADOOP_MAPRED_HOME=$HADOOP_HOME
+#    export HADOOP_COMMON_HOME=$HADOOP_HOME
+#
+#    export HADOOP_HDFS_HOME=$HADOOP_HOME
+#    export YARN_HOME=$HADOOP_HOME
+#    export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
+#    export HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/lib/native"
+#
+#    export PATH=$PATH:$HADOOP_HOME/sbin:$HADOOP_HOME/bin
+#    export HADOOP_INSTALL=$HADOOP_HOME
+#
+#    export CLASSPATH=$CLASSPATH:$HADOOP_HOME/lib/*:.
+#fi
 
 # Derby
-if [[ -d "$HOME/db-derby-10.14.2.0-bin" ]]; then
-    export DERBY_HOME=$HOME/db-derby-10.14.2.0-bin
-    export PATH=$PATH:$DERBY_HOME/bin
-
-    export CLASSPATH=$CLASSPATH:$DERBY_HOME/lib/derby.jar:$DERBY_HOME/lib/derbytools.jar
-fi
+#if [[ -d "$HOME/db-derby-10.14.2.0-bin" ]]; then
+#    export DERBY_HOME=$HOME/db-derby-10.14.2.0-bin
+#    export PATH=$PATH:$DERBY_HOME/bin
+#
+#    export CLASSPATH=$CLASSPATH:$DERBY_HOME/lib/derby.jar:$DERBY_HOME/lib/derbytools.jar
+#fi
 
 export GPG_TTY=$(tty)
 

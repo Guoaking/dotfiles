@@ -33,7 +33,7 @@ asdf: ## Install asdf-vm
 	@./install -c config/asdf-install.conf.yml --plugin-dir dotbot-brew
 	@./install -c config/asdf.conf.yml --plugin-dir dotbot-asdf
 
-update: ## Update everything
+update: ## Update mac everything
 	@make _prepare
 	@./install -c config/update.conf.yml
 

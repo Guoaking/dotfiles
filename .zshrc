@@ -37,6 +37,7 @@ zinit light Aloxaf/fzf-tab
 # zinit ice from"gh-r" as"program" mv"docker* -> docker-compose" bpick"*linux*"
 # zinit load docker/compose
 
+# plugins=(git fzf fzf-tab zsh-syntax-highlighting zsh-autosuggestions sudo vscode z autojump macos jsonto    ols man)
 zinit load agkozak/zsh-z
 # Ref: zdharma/fast-syntax-highlighting
 # Note: Use wait 1 second works for kubectl
@@ -50,8 +51,8 @@ zinit wait lucid for \
   atload"!_zsh_autosuggest_start" \
     zsh-users/zsh-autosuggestions \
   as"completion" is-snippet \
-    https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker \
-    https://github.com/docker/compose/blob/master/contrib/completion/zsh/_docker-compose
+#     https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker \
+#     https://github.com/docker/compose/blob/master/contrib/completion/zsh/_docker-compose
 
 # 语法高亮
 zinit ice lucid wait='0' atinit='zpcompinit'
@@ -73,11 +74,11 @@ zinit snippet OMZ::lib/theme-and-appearance.zsh
 zinit snippet OMZ::plugins/colored-man-pages/colored-man-pages.plugin.zsh
 zinit snippet OMZ::plugins/sudo/sudo.plugin.zsh
 zinit snippet OMZ::plugins/git-flow/git-flow.plugin.zsh
-zinit snippet OMZ::plugins/mvn/mvn.plugin.zsh
-zinit snippet OMZ::plugins/tmux/tmux.plugin.zsh
-zinit snippet OMZ::plugins/tmuxinator/tmuxinator.plugin.zsh
 zinit snippet OMZ::plugins/command-not-found/command-not-found.plugin.zsh
 zinit snippet OMZ::plugins/pip/pip.plugin.zsh
+# zinit snippet OMZ::plugins/mvn/mvn.plugin.zsh
+# zinit snippet OMZ::plugins/tmux/tmux.plugin.zsh
+# zinit snippet OMZ::plugins/tmuxinator/tmuxinator.plugin.zsh
 
 zinit ice lucid wait='1'
 zinit snippet OMZ::plugins/git/git.plugin.zsh
