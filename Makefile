@@ -15,7 +15,7 @@ dotfiles: ## Update dotfiles
 	@./install
 
 linux:
-	@./install -c config/apt.conf.yml --plugin-dir dotbot-apt-get
+	@./install -c config/apt-get.conf.yml --plugin-dir dotbot-apt-get
 
 snap:
 	@./install -c config/snap.conf.yml --plugin-dir dotbot-snap
@@ -24,7 +24,7 @@ macos: ## Run macos script
 	@./macos/init_mac.sh
 
 brew: ## Install brew & cask packages
-	@./install -c config/packages.conf.yml --plugin-dir dotbot-brew
+	@./install -c config/mac-packages.conf.yml --plugin-dir dotbot-brew
 
 tmux: ## Install non-brew tools eg. tmux package manager
 	@./install -c config/tmux.conf.yml

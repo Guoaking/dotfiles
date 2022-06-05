@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -e
+set -ex
 
 CONFIG="config/install.conf.yml"
 DOTBOT_DIR="dotbot"
@@ -8,11 +8,27 @@ DOTBOT_DIR="dotbot"
 DOTBOT_BIN="bin/dotbot"
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
+PLUGIN_APP="dotbot-brew"
+
+if [ $# != 1 ] ; then
+echo "请输入环境信息 eg: mac or apt-get"
+exit 1;
+fi
+
+if [[ $1 == "mac" ]]; then
+  PLUGIN_APP="dotbot-brew"
+elif [[ $1 == "apt-get" ]] ; then
+  PLUGIN_APP="dotbot-apt-get"
+fi
+
+
+
+
 cd "${BASEDIR}"
 git -C "${DOTBOT_DIR}" submodule sync --quiet --recursive
 git submodule update --init --recursive "${DOTBOT_DIR}"
 
 "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" \
 	--verbose \
-	--plugin-dir dotbot-brew \
+	--plugin-dir ${PLUGIN_APP} \
 	-c "${CONFIG}" "${@}"

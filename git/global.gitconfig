@@ -1,7 +1,7 @@
 [user]
 	email = git@einverne.info
-	name = Ein Verne
-	signingkey = 926634D64ACAD792
+	name = gk
+# 	signingkey = 926634D64ACAD792
 [push]
 	default = matching
 #[http]
