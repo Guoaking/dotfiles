@@ -2,7 +2,7 @@
 #alias ssh="kitty +kitten ssh"
 alias tmux="TERM=screen-256color tmux -2"
 alias vi="nvim"
-#alias ls="exa"
+#alias cd="cd && ls -lh"
 alias mux="TERM=screen-256color tmuxinator"
 alias ll="ls -alh"
 alias cp="cp -i"
@@ -32,3 +32,10 @@ if [[ -f ~/.ssh/assh.yml ]]; then
 fi
 
 alias pstop='watch "ps aux | sort -nrk 3,3 | head -n 5"'
+
+unalias cd
+cd() {
+    cd $1
+    ls -lh
+}
+alias cd="cdls"
