@@ -4,7 +4,8 @@ alias tmux="TERM=screen-256color tmux -2"
 alias vi="nvim"
 #alias cd="cd && ls -lh"
 alias mux="TERM=screen-256color tmuxinator"
-alias ll="ls -alh"
+alias ll="ls -lh"
+alias la="ls -alh"
 alias cp="cp -i"
 alias df="df -h"
 alias free="free -m"
@@ -14,9 +15,9 @@ alias ag="ag -i"
 alias mkdir="mkdir -p"
 alias e=$EDITOR
 
-alias mci="mvn -e -U clean install"
-alias mcp="mvn -U clean package"
-alias mvn-purge="mvn dependency:purge-local-repository"
+#alias mci="mvn -e -U clean install"
+#alias mcp="mvn -U clean package"
+#alias mvn-purge="mvn dependency:purge-local-repository"
 
 # https://stackoverflow.com/a/15503178/1820217
 alias gitlog="git ls-files -z | xargs -0n1 git blame -w --show-email | perl -n -e '/^.*?\((.*?)\s+[\d]{4}/; print $1,"\n"' | sort -f | uniq -c | sort -n"

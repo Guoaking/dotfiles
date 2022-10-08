@@ -161,7 +161,7 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=6'
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
-
+export VIM="$HOME/.vim"
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
